@@ -1,0 +1,236 @@
+/* --- リセットと基本設定 --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* --- ヘッダー --- */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* 擬似クラス :hover の練習1 - ロゴリンクの色が変わる */
+header h1 a:hover {
+  color: #1d4ed8;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+header nav a {
+  color: #6b7280;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* 擬似クラス :hover の練習2 - ナビゲーションリンクの背景色と文字色が変わる */
+header nav a:hover {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+/* --- セクション共通 --- */
+section {
+  padding: 60px 0;
+}
+
+/* --- ヒーローセクション --- */
+.hero {
+  background-color: #3b82f6;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- 会社概要セクション --- */
+.about {
+  background-color: #fff;
+}
+
+.about h3 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* 擬似要素 ::after の練習1 - タイトルの後に記号を追加 */
+.about h3::after {
+  content: "【company information】";
+  color: #3b82f6;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.about__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about ul {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.about li {
+  margin-bottom: 8px;
+}
+
+.about span {
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+/* --- 事業内容セクション（擬似クラスと擬似要素の練習ポイント） --- */
+.service {
+  background-color: #f0f4f8;
+}
+
+.service h3 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* 擬似要素 ::before の練習 - タイトルの前に記号を追加 */
+.service h3::before {
+  content: "★";
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+/* 擬似要素 ::after の練習2 - タイトルの後に記号を追加 */
+.service h3::after {
+  content: "★";
+  color: #3b82f6;
+  margin-left: 8px;
+}
+
+.service__grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 24px;
+}
+
+/* 擬似要素 ::after と擬似クラス :hover の組み合わせ練習 */
+.service__card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+/* 擬似クラス :hover の練習3 - カードの影を濃くする */
+.service__card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 擬似要素 ::after の練習3 - カードタイトルの後に記号を追加（初期状態では非表示） */
+.service__card h4::after {
+  content: "";
+  color: #3b82f6;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* 擬似クラス :hover と擬似要素 ::after の組み合わせ - マウスオーバー時に記号が表示される */
+.service__card:hover h4::after {
+  content: " →";
+  opacity: 1;
+}
+
+.service__card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.service__card p {
+  margin: 0;
+}
+
+/* --- フッター --- */
+footer {
+  background-color: #1f2937;
+  color: #fff;
+  padding: 32px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+footer nav a {
+  color: #d1d5db;
+  text-decoration: none;
+  margin: 0 16px;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+/* 擬似クラス :hover の練習4 - フッターリンクの色が変わる */
+footer nav a:hover {
+  color: #60a5fa;
+}
+
+/* --- メディアクエリ（デスクトップ向け） --- */
+@media (min-width: 768px) {
+  .service__grid {
+    grid-template-columns: 33% 33% 33%;
+  }
+}

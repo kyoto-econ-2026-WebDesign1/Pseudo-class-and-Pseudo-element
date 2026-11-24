@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>擬似クラスと擬似要素の練習</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <h1>
+        <a href="#">模擬企業</a>
+      </h1>
+      <nav aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#services">事業内容</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <div class="container">
+        <h2>未来をデザインする、あなたのパートナー</h2>
+        <p>Web制作とデジタルマーケティングを通じて、お客様のビジネス成長をサポートします。</p>
+      </div>
+    </section>
+
+    <!-- 会社概要セクション -->
+    <section id="about" class="about">
+      <div class="container">
+        <h3>会社概要</h3>
+        <div class="about__content">
+          <div>
+            <p>弊社は、最新のWeb標準技術とデザイン思考を融合させ、ユーザーにとって使いやすく、企業価値を高めるWebサイトを構築しています。</p>
+            <ul>
+              <li><span>設立:</span> 20XX年XX月</li>
+              <li><span>所在地:</span> 東京都千代田区</li>
+              <li><span>代表者:</span> 山田 太郎</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 事業内容セクション（擬似クラスと擬似要素の練習） -->
+    <section id="services" class="service">
+      <div class="container">
+        <h3>事業内容</h3>
+        <div class="service__grid">
+          <div class="service__card">
+            <h4>Webサイト制作</h4>
+            <p>最新のトレンドを取り入れた、高品質でレスポンシブなデザインを提供します。</p>
+          </div>
+          <div class="service__card">
+            <h4>デジタルマーケティング</h4>
+            <p>SEO対策、コンテンツ制作、SNS連携など、集客と売上向上に直結する戦略を立案・実行します。</p>
+          </div>
+          <div class="service__card">
+            <h4>システム開発</h4>
+            <p>業務効率化のためのカスタムシステムやWebアプリケーションの開発に対応しています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ウェブデザインⅠ</p>
+      <nav>
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+
+</html>
